@@ -1,0 +1,197 @@
+/* --- CÀI ĐẶT CHUNG --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    animation: fadeInup 0.6s ease-out;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+/* --- TRANG CHỦ (INDEX) --- */
+.main-bg {
+    background-color: #f0f8ff; /* Xanh dương nhạt */
+}
+
+.title-box {
+    text-align: center;
+    border: 2px solid #4a90e2;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 40px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #4a90e2;
+    margin: 30px 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Khu vực 3 thẻ game */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Hiệu ứng click (ấn vào) bằng CSS */
+.card:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #eee; /* Màu nền chờ ảnh */
+}
+
+/* Khu vực thông tin cá nhân */
+.info-box {
+    border: 2px solid #4a90e2;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.copyright {
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+    color: #777;
+}
+
+/* --- CÁC TRANG GAME (CHUNG) --- */
+.game-bg {
+    background-color: #ffffff;
+}
+
+.game-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.content-box {
+    border: 3px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.content-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #eee;
+}
+
+.return-btn {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: 2px solid #000;
+    color: #000;
+    background: #fff;
+}
+
+.return-btn:active {
+    transform: scale(0.95);
+}
+
+/* --- MÀU SẮC RIÊNG CHO TỪNG GAME --- */
+
+/* Valorant (Đỏ & Vàng) */
+.val-bg { background-color: #00061dfa; color: #fff; } /* Nền tối cho hợp game */
+.val-title { color: #ff4655; text-shadow: 2px 2px 0 #ece8e1; }
+.val-box { border-color: #ff4655; background-color: #1f2326; color: #ece8e1; }
+.val-btn { border-color: #ff4655; color: #ff4655; background: #1f2326; }
+.val-btn:active { background: #ff4655; color: #fff; }
+
+/* Genshin Impact (Xanh ngọc lam, Trắng, Vàng Gold) */
+.gen-bg { background-color: #f0fdfa; }
+.gen-title { color: #d4af37; text-shadow: 1px 1px 0 #2c3e50; } /* Vàng Gold */
+.gen-box { border-color: #20b2aa; background-color: #ffffff; } /* Teal */
+.gen-btn { border-color: #d4af37; color: #d4af37; }
+.gen-btn:active { background: #d4af37; color: #fff; }
+
+/* Aniimo (Xanh lá mạ, Tím nhạt) */
+.ani-bg { background-color: #f0fff4; }
+.ani-title { color: #9370db; } /* Tím nhạt */
+.ani-box { border-color: #98fb98; background-color: #ffffff; } /* Mint green */
+.ani-btn { border-color: #9370db; color: #9370db; }
+.ani-btn:active { background: #9370db; color: #fff; }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
